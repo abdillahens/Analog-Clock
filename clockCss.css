@@ -1,0 +1,107 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h3{
+    color: rgb(192, 191, 183);
+    
+}
+body{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+
+}
+.numerique{
+    position: absolute;
+}
+.numerique h1{
+ /* padding-bottom: 80px; */
+ margin-bottom: 40px;
+
+}
+.numerique h3{
+    padding-top:60px ;
+    margin-left: 20px;
+   
+   }
+.clock{
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(clock.png);
+  background-size: cover;
+  border-radius: 50%;
+  border: 4px solid #091921;
+  box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.05),inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+  0 15px 15px rgba(90, 89, 89, 0.2),inset 0 15px 15px rgba(153, 151, 151, 0.445);
+
+}
+.clock::before{
+ 
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .min ,.clock .hour ,.clock .second{
+    position: absolute;
+}
+.clock .hour , .hr{
+    width: 160px;
+    height: 160px;
+}
+.clock .min , .mn{
+    width: 190px;
+    height: 190px;
+}
+.clock .second , .sc{
+    width: 230px;
+    height: 230px;
+}
+.mn,.hr,.sc{
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 50%;
+}
+.hr::before{
+
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #d80909;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn::before{
+
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: rgb(19, 165, 50);
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.sc::before{
+
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
